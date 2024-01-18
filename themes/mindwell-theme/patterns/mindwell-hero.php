@@ -29,7 +29,7 @@
 
 		<!-- wp:column {"verticalAlignment":"center","width":"100%","style":{"spacing":{"padding":{"bottom":"3.56rem"}}}} -->
 		<div class="wp-block-column is-vertically-aligned-center" style="padding-bottom:3.56rem;flex-basis:100%"><!-- wp:image {"align":"center","id":26,"sizeSlug":"full","linkDestination":"none"} -->
-			<figure class="wp-block-image aligncenter size-full"><img src="<?php echo esc_url( MW_DIR_URI ); ?>/assets/images/hero.png" alt="<?php esc_attr_e( 'Hero image', 'mindwell' ); ?>" class="hero-img" /></figure>
+			<figure class="wp-block-image aligncenter"><img src="<?php echo esc_url( MW_DIR_URI ); ?>/assets/images/hero.png" alt="<?php esc_attr_e( 'Hero image', 'mindwell' ); ?>" class="wp-image-26"/></figure>
 			<!-- /wp:image -->
 		</div>
 		<!-- /wp:column -->
