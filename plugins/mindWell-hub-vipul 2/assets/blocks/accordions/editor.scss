@@ -1,0 +1,21 @@
+@import "../../scss/mixins";
+
+.custom-accordion__panel {
+	/* The following styles are intentional to override default wordpress styles. */
+	margin-top: 20px !important;
+	padding-left: 0 !important;
+
+	h2 {
+		margin-bottom: 7px;
+	}
+}
+
+.faq__accordion--item {
+	summary {
+		@include display-flex(row, space-between, center);
+	}
+}
+
+.lead-text {
+	color: map-get($map: $colors, $key: "grey-text");
+}

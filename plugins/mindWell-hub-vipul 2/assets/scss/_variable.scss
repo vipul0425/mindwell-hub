@@ -1,0 +1,21 @@
+$colors: (
+	"primary": #1e5542,
+	"primary-light": #ebf0ee,
+	"primary-bg-light": rgba(30, 85, 66, 0.09),
+	"grey-text": #5d6056,
+	"red": #f41027,
+	"white": #fff,
+	"black": #161a0b,
+);
+
+// Global padding
+$global-mobile-padding: 1rem;
+$global-desktop-padding-x: 15.625vw;
+$global-desktop-padding-y: 2.25rem;
+
+// Device Width
+$desktop-width: 1024px;
+$tablet-width: 768px;
+
+// Desktop content max-width
+$desktop-content-max-width: 86.25rem;

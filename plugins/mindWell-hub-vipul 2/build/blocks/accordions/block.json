@@ -1,0 +1,33 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "mindwell/accordion",
+  "parent": [
+    "mindwell/faq"
+  ],
+  "title": "Accordions",
+  "description": "Accordions block",
+  "icon": "table-row-after",
+  "category": "mindwell-blocks",
+  "textdomain": "mindwell",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "viewScript": "file:./view.js",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php",
+  "supports": {
+    "html": false,
+    "anchor": true,
+    "reusable": false
+  },
+  "attributes": {
+    "postUrl": {
+      "type": "string",
+      "default": "https://jsonplaceholder.typicode.com/posts?_limit=6"
+    },
+    "customAccordion": {
+      "type": "array",
+      "default": []
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+	"singleQuote": true,
+	"bracketSpacing": true,
+	"tabWidth": 2,
+	"useTabs": true,
+	"overrides": [
+		{
+			"files": "*.html",
+			"options": {
+				"tabWidth": 2,
+				"useTabs": true
+			}
+		},
+		{
+			"files": "*.css",
+			"options": {
+				"tabWidth": 2,
+				"useTabs": true
+			}
+		},
+		{
+			"files": "*.js",
+			"options": {
+				"tabWidth": 2,
+				"useTabs": true,
+				"spaceInsideParentheses": "true"
+			}
+		}
+	]
+}

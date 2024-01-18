@@ -1,0 +1,115 @@
+@import "../../scss/variable";
+@import "../../scss/mixins";
+
+.faq__accordion {
+	&--items {
+		padding-left: 0;
+
+		li {
+			margin-bottom: 1.91rem;
+			list-style: none;
+			position: relative;
+		}
+
+		.faq__accordion--item-content {
+			max-height: 0;
+			padding-top: 0;
+			overflow: hidden;
+			font-size: 0.875rem;
+			font-weight: 300;
+			line-height: 1.5rem;
+			padding-left: 2.56rem;
+			padding-top: 0.6rem;
+			margin: 0;
+			transition: max-height 400ms ease-out;
+		}
+	}
+
+	&--item {
+		list-style: none;
+		overflow: hidden;
+		margin: 0;
+
+		summary {
+			&::-webkit-details-marker {
+				display: none;
+			}
+
+			cursor: pointer;
+			font-size: 1.125rem;
+			font-weight: 500;
+			line-height: 1.375rem;
+			list-style: none;
+			padding-left: 2.56rem;
+			text-transform: capitalize;
+
+			&::before {
+				@include display-flex(row, center, center);
+				border-radius: 50%;
+				box-shadow: 0px 4px 30px 0px #0000001a;
+				content: url("../../svgs/expand.svg");
+				box-sizing: border-box;
+				height: 1.875rem;
+				position: absolute;
+				left: 0;
+				transition: 0.2s;
+				width: 1.875rem;
+			}
+		}
+
+		&[open] summary::before {
+			align-items: flex-start;
+			content: url("../../svgs/collapse.svg");
+			transform: rotate(180deg);
+		}
+
+		&.open,
+		&[open] + .faq__accordion--item-content {
+			max-height: 200px;
+			transition: max-height 400ms ease-out;
+		}
+	}
+
+	@include media-query($desktop-width) {
+		margin-top: 8rem;
+		align-self: flex-start;
+
+		&--items {
+			li {
+				margin-bottom: 4rem;
+			}
+
+			.faq__accordion--item-content {
+				padding-left: 4.88rem;
+				font-size: 1rem;
+				font-weight: 300;
+				line-height: 1.625rem;
+			}
+		}
+
+		&--item {
+			margin: 0;
+
+			summary {
+				padding-left: 4.88rem;
+				font-size: 1.25rem;
+				font-weight: 500;
+				line-height: 2rem;
+				text-transform: capitalize;
+
+				&::before {
+					font-size: 1.25rem;
+					height: 3.25rem;
+					line-height: 2rem;
+					width: 3.25rem;
+					top: -10px;
+				}
+			}
+
+			&[open] summary::before {
+				align-items: center;
+				padding-bottom: 8px;
+			}
+		}
+	}
+}

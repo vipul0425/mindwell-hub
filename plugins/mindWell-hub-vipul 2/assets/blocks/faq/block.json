@@ -1,0 +1,88 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "mindwell/faq",
+	"title": "Faq",
+	"description": "FAQ section for the website.",
+	"icon": "info",
+	"category": "mindwell-blocks",
+	"textdomain": "mindwell",
+	"editorScript": "file:./index.js",
+	"style": "file:./style-index.css",
+	"editorStyle": "file:./index.css",
+	"supports": {
+		"html": false,
+		"align": [ "wide", "full" ],
+		"alignWide": true,
+		"layout": true,
+		"spacing": {
+			"margin": true,
+			"padding": true,
+			"blockGap": true
+		}
+	},
+	"attributes": {
+		"align": {
+			"type": "string",
+			"default": "wide"
+		}
+	},
+	"example": {
+		"attributes": {
+			"align": "wide"
+		},
+		"innerBlocks": [
+			{
+				"name": "core/columns",
+				"attributes": {
+					"className": "faq"
+				},
+				"innerBlocks": [
+					{
+						"name": "core/column",
+						"attributes": {
+							"className": "faq__info"
+						},
+						"innerBlocks": [
+							{
+								"name": "mindwell/heading",
+								"attributes": {
+									"heading": "FAQs"
+								}
+							},
+							{
+								"name": "core/paragraph",
+								"attributes": {
+									"className": "faq__description",
+									"typography": true,
+									"placeholder": "Description…",
+									"content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, ab."
+								}
+							},
+							{
+								"name": "core/button",
+								"attributes": {
+									"className": "faq__btn"
+								}
+							},
+							{
+								"name": "core/image",
+								"attributes": {
+									"className": "faq__img--container"
+								}
+							}
+						]
+					},
+					{
+						"name": "core/column",
+						"innerBlocks": [
+							{
+								"name": "mindwell/accordion"
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+}

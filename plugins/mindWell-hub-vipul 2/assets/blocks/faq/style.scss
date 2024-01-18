@@ -1,0 +1,107 @@
+@import "../../scss/variable";
+@import "../../scss/mixins";
+
+.faq-container {
+	width: 100%;
+
+	.faq {
+		padding: $global-mobile-padding;
+		position: relative;
+
+		strong {
+			font-weight: 600;
+		}
+
+		&__title {
+			font-size: 2.5rem;
+			font-weight: 275;
+			margin-bottom: 0;
+			margin-top: 2.75rem;
+			line-height: 3rem;
+		}
+
+		&__description {
+			color: map-get($map: $colors, $key: "grey-text");
+			font-weight: 300;
+			margin-bottom: 2.8rem;
+			margin-top: 0.75rem;
+			line-height: 1.5rem;
+		}
+
+		&__btn,
+		&__img--container {
+			display: none;
+		}
+
+		@include media-query($tablet-width) {
+		}
+
+		@include media-query($desktop-width) {
+			@include display-flex(row, flex-start, flex-start);
+			-ms-flex-wrap: nowrap;
+			flex-wrap: nowrap;
+			gap: 7.94rem;
+			background-image: url(../../svgs/path238.svg),
+				url(../../svgs/path232.svg), url(../../svgs/ellipse157.svg),
+				url(../../svgs/path264.svg);
+			background-repeat: no-repeat;
+			background-position:
+				18rem 2rem,
+				left 13rem,
+				18rem 17rem,
+				right 1rem;
+
+			&__info {
+				position: relative;
+				max-width: 25.9375rem;
+			}
+
+			&__title {
+				font-size: 3rem;
+				line-height: 3.75rem;
+				max-width: 22.8125rem;
+				margin-top: 5rem;
+				margin-bottom: 1.38rem;
+			}
+
+			&__description {
+				font-size: 1.25rem;
+				font-weight: 300;
+				line-height: 1.875rem;
+				max-width: 24.8125rem;
+				margin-bottom: 0.88rem;
+			}
+
+			&__btn,
+			&__img--container {
+				display: flex;
+				margin-bottom: 3.56rem;
+			}
+
+			&__btn a,
+			&__btn > div {
+				@include primary-button;
+				border: 0;
+				font-size: 0.9375rem;
+				font-weight: 500;
+				padding: 0.88rem 2.4rem;
+				transition: all 0.3s ease-in-out;
+
+				&:hover,
+				&:focus {
+					background-color: transparent;
+					color: map-get($map: $colors, $key: "primary");
+					outline: 2px solid map-get($map: $colors, $key: "primary");
+				}
+			}
+
+			&__img--container {
+				width: 100%;
+				img {
+					object-fit: cover;
+					width: 100%;
+				}
+			}
+		}
+	}
+}
