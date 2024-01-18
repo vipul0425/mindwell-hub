@@ -2,7 +2,7 @@
 	"name": "mindwell",
 	"version": "0.1.0",
 	"author": "Vipul Gupta",
-	"description": "Mindwell Plugin is a powerful addition to your WordPress website, offering a custom Gutenberg block designed specifically for seamlessly integrating an FAQ section.",
+	"description": "Mindwell Hub Project for WordPress - Contains the custom blocks and the block based theme.",
 	"license": "GPL-3.0",
 	"scripts": {
 		"lint:js": "wp-scripts lint-js assets/blocks --no-error-on-unmatched-pattern",
