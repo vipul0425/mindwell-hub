@@ -1,0 +1,132 @@
+/*
+Theme Name: Mindwell Theme
+Theme URI: https://wordpress.org/themes/twentytwentythree
+Author: rtcamp
+Template: twentytwentythree
+Author URI: https://rtcamp.com
+Description: Mindwell theme is a block theme for WordPress. It is inspired by the Twenty Twenty-Three theme.
+Requires at least: 6.1
+Tested up to: 6.4
+Requires PHP: 5.6
+Version: 1.3
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+Text Domain: mindwell
+*/
+
+.wp-site-blocks {
+	padding-top: 0 !important;
+	padding-bottom: 0 !important;
+}
+
+.mw-header{
+	position: sticky;
+	top: 0;
+	z-index: 10;
+}
+
+h1 strong {
+	font-weight: 600;
+}
+
+.nav-row {
+	flex-direction: row-reverse;
+	justify-content: end !important;
+}
+
+.wp-block-navigation__responsive-container ul li {
+	opacity: 0.5;
+	transition: 0.3s;
+}
+
+.wp-block-navigation__responsive-container ul li:hover,
+.wp-block-navigation__responsive-container ul li:focus {
+	opacity: 1;
+}
+
+.wp-block-button__link {
+	transition: 0.3s;
+}
+
+.wp-block-button.is-style-outline:hover a {
+	background-color: var(--wp--preset--color--primary) !important;
+	color: var(--wp--preset--color--white) !important;
+}
+
+.btn--sign-in {
+	display: none !important;
+	transition: all 0.3s ease-in-out;
+}
+
+.btn--sign-in:hover {
+	transform: scale(1.1);
+}
+
+.wp-block-columns {
+	padding: 1rem !important;
+}
+
+.wp-block-navigation__responsive-container {
+	background-color: var(--wp--preset--color--primary) !important;
+	color: var(--wp--preset--color--white) !important;
+	left: 100%;
+	transform: translateX(-100%) !important;
+	width: 50%;
+}
+
+.wp-block-navigation__responsive-container.is-menu-open {
+	animation: overlay-menu__fade-in-animation .5s ease-out;
+}
+
+@keyframes overlay-menu__fade-in-animation {
+	0% {
+		max-width: 0;
+	}
+
+	to {
+		max-width: 100%;
+	}
+}
+
+
+/* Responsive styles */
+@media screen and (min-width: 1055px) {
+	.btn--sign-in {
+		display: block !important;
+	}
+
+	.nav-row {
+		flex-direction: row;
+		justify-content: end;
+	}
+
+	/* Reset header responsive styles */
+	.wp-block-navigation__responsive-container-open:not(.always-shown) {
+		display: none !important;
+	}
+
+	.wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open) {
+		display: block !important;
+
+	}
+}
+
+
+@media (min-width: 600px) {
+	.wp-block-navigation__responsive-container-open:not(.always-shown) {
+		display: flex;
+	}
+
+	.wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open) {
+		display: none;
+	}
+
+	.wp-block-columns {
+		padding: 2.5rem 2.375em !important;
+	}
+
+	h1 {
+		line-height: 5.625rem;
+	}
+
+}
