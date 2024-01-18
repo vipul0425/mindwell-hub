@@ -33,7 +33,14 @@ const useFetch = ( url ) => {
 				if ( ! response.ok ) {
 					throw new Error( __( 'Failed to fetch data', 'mindwell' ) );
 				}
-				const responseData = await response.json();
+				let responseData;
+				try {
+					responseData = await response.json();
+				} catch ( err ) {
+					throw new Error(
+						__( 'API response is not valid', 'mindwell' )
+					);
+				}
 				setError( null );
 				setData( responseData );
 			} catch ( err ) {
