@@ -1,5 +1,5 @@
-@import "../../scss/variable";
-@import "../../scss/mixins";
+@import "../../assets/scss/variable";
+@import "../../assets/scss/mixins";
 
 .faq-container {
 	width: 100%;
@@ -41,9 +41,9 @@
 			-ms-flex-wrap: nowrap;
 			flex-wrap: nowrap;
 			gap: 7.94rem;
-			background-image: url(../../svgs/path238.svg),
-				url(../../svgs/path232.svg), url(../../svgs/ellipse157.svg),
-				url(../../svgs/path264.svg);
+			background-image: url(../../assets/svgs/path238.svg),
+				url(../../assets/svgs/path232.svg), url(../../assets/svgs/ellipse157.svg),
+				url(../../assets/svgs/path264.svg);
 			background-repeat: no-repeat;
 			background-position:
 				18rem 2rem,

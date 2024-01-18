@@ -6,7 +6,7 @@
  */
 
 // Include the helper functions file.
-require_once MINDWELL_PATH . 'assets/blocks/accordions/helper.php';
+require_once MINDWELL_PATH . 'src/accordions/helper.php';
 
 // Retrieve the URL of the post from the attributes, postUrl has a default value 'https://jsonplaceholder.typicode.com/posts?_limit=6' so it cannot be null.
 $post_url = $attributes['postUrl'];

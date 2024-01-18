@@ -1,5 +1,5 @@
-@import "../../scss/variable";
-@import "../../scss/mixins";
+@import "../../assets/scss/variable";
+@import "../../assets/scss/mixins";
 
 .faq__accordion {
 	&--items {
@@ -47,7 +47,7 @@
 				@include display-flex(row, center, center);
 				border-radius: 50%;
 				box-shadow: 0px 4px 30px 0px #0000001a;
-				content: url("../../svgs/expand.svg");
+				content: url("../../assets/svgs/expand.svg");
 				box-sizing: border-box;
 				height: 1.875rem;
 				position: absolute;
@@ -59,7 +59,7 @@
 
 		&[open] summary::before {
 			align-items: flex-start;
-			content: url("../../svgs/collapse.svg");
+			content: url("../../assets/svgs/collapse.svg");
 			transform: rotate(180deg);
 		}
 
