@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name:     mindwell-hub-vipul
+ * Plugin Name:     Feature Blocks
  * Plugin URI:      rtcamp.com
  * Description:     FAQ section block
  * Author:          Vipul Gupta
