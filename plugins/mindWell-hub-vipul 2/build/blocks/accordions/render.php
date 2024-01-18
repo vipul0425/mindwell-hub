@@ -17,31 +17,6 @@ $custom_accordions = $attributes['customAccordion'];
 // Make an HTTP GET request to the specified URL.
 $accordion_data = fetch_accordion_data( $post_url );
 
-
-if ( ! function_exists( 'accordion_item' ) ) {
-	/**
-	 * Generates an accordion item for a FAQ section.
-	 *
-	 * @param mixed $title The title of the accordion item.
-	 * @param mixed $body The content of the accordion item.
-	 */
-	function accordion_item( $title, $body ) {
-
-		// Output the HTML structure for an accordion item.
-		?>
-	<li>
-		<details class="faq__accordion--item">
-			<summary>
-				<span><?php echo esc_html( $title ); ?></span>
-		</summary>
-		</details>
-		<p class="faq__accordion--item-content"><?php echo esc_html( $body ); ?></p>
-	</li>
-
-		<?php
-	}
-}
-
 ?>
 
 <!-- Start of the Accordion block -->
@@ -54,7 +29,7 @@ if ( ! function_exists( 'accordion_item' ) ) {
 		if ( is_array( $accordion_data ) ) {
 			// Iterate over each dynamic post and generate an accordion item.
 			foreach ( $accordion_data as $accordion ) {
-				accordion_item( $accordion->title, $accordion->body );
+				mh_accordion_item( $accordion->title, $accordion->body );
 			}
 		} else {
 			// Display an error message if the data could not be fetched.
@@ -66,7 +41,7 @@ if ( ! function_exists( 'accordion_item' ) ) {
 
 			// Iterate over each custom accordion and generate an accordion item.
 			foreach ( $custom_accordions as $accordion ) {
-				accordion_item( $accordion['title'], $accordion['body'] );
+				mh_accordion_item( $accordion['title'], $accordion['body'] );
 			}
 		}
 		?>

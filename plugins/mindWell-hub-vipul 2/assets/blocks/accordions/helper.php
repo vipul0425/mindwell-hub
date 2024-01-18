@@ -5,6 +5,30 @@
  * @package Mindwell
  */
 
+if ( ! function_exists( 'mh_accordion_item' ) ) {
+	/**
+	 * Generates an accordion item for a FAQ section.
+	 *
+	 * @param mixed $title The title of the accordion item.
+	 * @param mixed $body The content of the accordion item.
+	 */
+	function mh_accordion_item( $title, $body ) {
+
+		// Output the HTML structure for an accordion item.
+		?>
+		<li>
+			<details class="faq__accordion--item">
+				<summary>
+					<span><?php echo esc_html( $title ); ?></span>
+				</summary>
+			</details>
+			<p class="faq__accordion--item-content"><?php echo esc_html( $body ); ?></p>
+		</li>
+
+		<?php
+	}
+}
+
 /**
  * Fetches accordion data from the specified URL.
  *
