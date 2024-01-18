@@ -20,7 +20,7 @@ $accordion_data = fetch_accordion_data( $post_url );
 ?>
 
 <!-- Start of the Accordion block -->
-<div class="faq__accordion">
+<div <?php echo wp_kses_data( get_block_wrapper_attributes( array( 'class' => 'faq__accordion' ) ) ); ?>>
 	<ul class="faq__accordion--items" id="faq__accordion--items">
 		<?php
 
