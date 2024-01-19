@@ -135,58 +135,48 @@ export default function TabsInspectorControls( { attributes, setAttributes } ) {
 						{ __( 'Fetch Posts', 'mindwell' ) }
 					</Button>
 				</ButtonGroup>
-
-				{ /* Section for adding custom accordion items */ }
-				<PanelBody
-					title={ __( 'Add Custom Accordion', 'mindwell' ) }
-					className={ 'custom-accordion__panel' }
+			</PanelBody>
+			{ /* Section for adding custom accordion items */ }
+			<PanelBody title={ __( 'Add Custom Accordion', 'mindwell' ) }>
+				<h2>{ __( 'Title', 'mindwell' ) }</h2>
+				<TextControl
+					placeholder={ __( 'Enter Accordion Title', 'mindwell' ) }
+					value={ newAccordionItem.title }
+					onChange={ ( value ) =>
+						setNewAccordionItem( {
+							...newAccordionItem,
+							title: value,
+						} )
+					}
+				/>
+				<h2>{ __( 'Body', 'mindwell' ) }</h2>
+				<TextareaControl
+					placeholder={ __( 'Enter Accordion Body', 'mindwell' ) }
+					value={ newAccordionItem.body }
+					onChange={ ( value ) =>
+						setNewAccordionItem( {
+							...newAccordionItem,
+							body: value,
+						} )
+					}
+					help={
+						errors.newAccordionItem ? (
+							<Notice status="warning" isDismissible={ false }>
+								{ errors.newAccordionItem }
+							</Notice>
+						) : (
+							''
+						)
+					}
+				/>
+				<Button
+					variant="primary"
+					onClick={ handleAddAccordionItem }
+					icon="plus-alt2"
+					label={ __( 'Add Accordion Item', 'mindwell' ) }
 				>
-					<h2>{ __( 'Title', 'mindwell' ) }</h2>
-					<TextControl
-						placeholder={ __(
-							'Enter Accordion Title',
-							'mindwell'
-						) }
-						value={ newAccordionItem.title }
-						onChange={ ( value ) =>
-							setNewAccordionItem( {
-								...newAccordionItem,
-								title: value,
-							} )
-						}
-					/>
-					<h2>{ __( 'Body', 'mindwell' ) }</h2>
-					<TextareaControl
-						placeholder={ __( 'Enter Accordion Body', 'mindwell' ) }
-						value={ newAccordionItem.body }
-						onChange={ ( value ) =>
-							setNewAccordionItem( {
-								...newAccordionItem,
-								body: value,
-							} )
-						}
-						help={
-							errors.newAccordionItem ? (
-								<Notice
-									status="warning"
-									isDismissible={ false }
-								>
-									{ errors.newAccordionItem }
-								</Notice>
-							) : (
-								''
-							)
-						}
-					/>
-					<Button
-						variant="primary"
-						onClick={ handleAddAccordionItem }
-						icon="plus-alt2"
-						label={ __( 'Add Accordion Item', 'mindwell' ) }
-					>
-						{ __( 'Add Accordion Item', 'mindwell' ) }
-					</Button>
-				</PanelBody>
+					{ __( 'Add Accordion Item', 'mindwell' ) }
+				</Button>
 			</PanelBody>
 		</InspectorControls>
 	);
