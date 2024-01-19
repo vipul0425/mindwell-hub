@@ -35,7 +35,7 @@ if ( ! function_exists( 'mh_accordion_item' ) ) {
  * @param string $post_url The URL to fetch data from.
  * @return mixed The dynamic posts retrieved from the response body, or an error message if unable to fetch data.
  */
-function fetch_accordion_data( $post_url ) {
+function mh_fetch_accordion_data( $post_url ) {
 	// Make an HTTP GET request to the specified URL.
 	$response = wp_remote_get( $post_url );
 

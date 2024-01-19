@@ -15,7 +15,7 @@ $post_url = $attributes['postUrl'];
 $custom_accordions = $attributes['customAccordion'];
 
 // Make an HTTP GET request to the specified URL.
-$accordion_data = fetch_accordion_data( $post_url );
+$accordion_data = mh_fetch_accordion_data( $post_url );
 
 ?>
 
