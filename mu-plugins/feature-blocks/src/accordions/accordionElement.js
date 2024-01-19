@@ -22,6 +22,7 @@ const AccordionElement = ( {
 	removable,
 	handleRemoveCustomAccordion,
 } ) => {
+	const bodyWithLineBreaks = body.replace( /\n/g, '\n' ); // Optionally replace newline characters with '\n'
 	return (
 		<li>
 			<details className="faq__accordion--item">
@@ -42,7 +43,9 @@ const AccordionElement = ( {
 					</ButtonGroup>
 				</summary>
 			</details>
-			<p className="faq__accordion--item-content">{ body }</p>
+			<p className="faq__accordion--item-content">
+				{ bodyWithLineBreaks }
+			</p>
 		</li>
 	);
 };

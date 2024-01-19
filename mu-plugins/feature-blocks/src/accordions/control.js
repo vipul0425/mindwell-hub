@@ -8,6 +8,7 @@ import {
 	Button,
 	ButtonGroup,
 	TextControl,
+	TextareaControl,
 	Notice,
 } from '@wordpress/components';
 import { useState } from '@wordpress/element';
@@ -155,7 +156,7 @@ export default function TabsInspectorControls( { attributes, setAttributes } ) {
 						}
 					/>
 					<h2>{ __( 'Body', 'mindwell' ) }</h2>
-					<TextControl
+					<TextareaControl
 						placeholder={ __( 'Enter Accordion Body', 'mindwell' ) }
 						value={ newAccordionItem.body }
 						onChange={ ( value ) =>

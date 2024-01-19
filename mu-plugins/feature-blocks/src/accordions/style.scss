@@ -65,7 +65,7 @@
 
 		&.open,
 		&[open] + .faq__accordion--item-content {
-			max-height: 200px;
+			max-height: 600px;
 			transition: max-height 400ms ease-out;
 		}
 	}
@@ -84,6 +84,7 @@
 				font-size: 1rem;
 				font-weight: 300;
 				line-height: 1.625rem;
+				white-space: pre-line;
 			}
 		}
 
